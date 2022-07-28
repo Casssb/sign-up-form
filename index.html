@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+    <title>Sign-up Form</title>
+  </head>
+  <body>
+    <header>
+      <img src="/img/fireworks.jpg" alt="image of dark sky with multi-coloured fireworks" />
+      <div class="logo-header">
+        <h1>title for form</h1>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <p>
+          This is not a real online service! Didn't your moma tell you not to
+          put personal info into some random form on the internet?.<br />
+          Sign up <em>now</em> to get hacked.
+        </p>
+        <p>You <em>know</em> you want to.</p>
+      </section>
+
+      <form action="#" method="post">
+        <div class="form-container">
+          <div class="form-element">
+            <label for="first-name">First Name</label>
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              placeholder="e.g. Bob"
+              required
+            />
+          </div>
+          <div class="form-element">
+            <label for="last-name">Last Name</label>
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              placeholder="e.g. Ross"
+              required
+            />
+          </div>
+          <div class="form-element">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="e.g. foo@bar.com"
+              required
+            />
+          </div>
+          <div class="form-element">
+            <label for="phone-number">Phone Number</label>
+            <input
+              type="tel"
+              id="phone-number"
+              minlength="9"
+              pattern="[0-9]+"
+              placeholder="01202 257788"
+              required
+            />
+          </div>
+          <div class="form-element">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Scam1337!"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
+              required
+            />
+          </div>
+          <div class="form-element">
+            <label for="confirm-password">Confirm Password</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              placeholder="Scam1337!"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
+              required
+            />
+          </div>
+        </div>
+        <button type="submit">Create Account</button>
+      </form>
+
+      <section>
+        <h3>Already have an account? <span>Log in</span></h3>
+      </section>
+    </main>
+  </body>
+</html>
