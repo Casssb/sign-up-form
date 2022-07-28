@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
     height: 100vh;
     width: 100vw;
     display: grid;
@@ -22,6 +23,10 @@ span {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 1.3rem;
+}
+
+em {
+    font-style: italic;
 }
 
 header {
@@ -51,6 +56,12 @@ header > img {
     z-index: 1;
     position: absolute;
 }
+.logo-header > img {
+    width: 50px;
+    background: var(--main-linear-gradient);
+    border: 2px solid var(--background-color-main);
+    border-radius: 50%;
+}
 
 .logo-header > h1 {
     font: bold 3rem Poppins, sans-serif;
@@ -69,9 +80,21 @@ main {
     color: antiquewhite;
 }
 
+main > section > p {
+    max-width: 40rem;
+    align-self: center;
+}
+
 form {
     display: flex;
     flex-direction: column;
+    background-color: rgba(190,177,223,0.1);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+form > h2 {
+    font-size: 1.5rem;
 }
 
 .form-container {
@@ -84,6 +107,7 @@ form {
     display: flex;
     flex-direction: column;
     background-color: var(--background-color-main);
+    font-size: 1rem;
 }
 
 .form-gradient {
@@ -103,7 +127,7 @@ form {
 .button-wrapper > button {
     font-family: 'Roboto', sans-serif;
     width: fit-content;
-    border-radius: 7%;
+    border-radius: 5px;
     padding: 0.5rem;
     background-color: var(--background-color-main);
     color: antiquewhite;
@@ -128,15 +152,45 @@ input:hover::placeholder {
 }
 
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 903px) {
     body {
         display: flex;
         flex-direction: column;
+        font-size: 1rem;
+    }
+
+    form > h2 {
+        font-size: 1rem;
+    }
+
+    .form-element {
+        font-size: 0.8;
     }
 }
 
 @media only screen and (max-width: 480px) {
+    body {
+        font-size: 0.8rem;
+    }
     .form-container {
         grid-template-columns: 1fr;
+    }
+
+    .form-element {
+        font-size: 0.6rem;
+    }
+
+    header > img {
+        display: none;
+    }
+    .logo-header {
+        position: static;
+        background-color: black;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    body {
+        font-size: 00.6rem;
     }
 }
