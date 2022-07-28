@@ -11,7 +11,10 @@
   </head>
   <body>
     <header>
-      <img src="/img/fireworks.jpg" alt="image of dark sky with multi-coloured fireworks" />
+      <img
+        src="/img/fireworks.jpg"
+        alt="image of dark sky with multi-coloured fireworks"
+      />
       <div class="logo-header">
         <h1>title for form</h1>
       </div>
@@ -77,7 +80,8 @@
               id="password"
               name="password"
               placeholder="Scam1337!"
-              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
+              title="Must have at least 8 characters and contain 1 of each of the following; number, uppercase letter, lowercase letter and special character "
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$"
               required
             />
           </div>
