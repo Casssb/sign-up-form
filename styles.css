@@ -83,6 +83,20 @@ header > img {
   -webkit-text-fill-color: transparent;
 }
 
+.images-credit {
+  font-size: 0.6rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.images-credit > p > a {
+  color: antiquewhite;
+  text-decoration: none;
+}
+
 /* main section stylings start here */
 
 main {
@@ -138,27 +152,38 @@ form > h2 {
         rgba(205, 85, 215, 1)
       )
       border-box;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 3px solid transparent;
   box-shadow: 0 0 10px 3px var(--main-box-shadow);
 }
 
 .form-element > label {
     padding-left: 0.2rem;
+    font-size: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 input {
+    outline: none;
     border: 0;
     background-color: antiquewhite;
     cursor: pointer;
 }
 
 input:valid {
-    border-bottom: 2px solid rgb(9, 161, 72);
+    border-bottom: 3px solid rgb(9, 161, 72);
+}
+
+input:valid:focus {
+  color: rgb(44, 109, 28);
 }
 
 input:invalid {
   color: rgb(190, 37, 37);
+}
+
+input:invalid:focus {
+  border-bottom: 3px solid rgb(161, 9, 9);
 }
 
 
@@ -214,6 +239,11 @@ input:hover::placeholder {
     object-fit: cover;
   }
 
+  .images-credit {
+    font-size: 0.4rem;
+    top: 0;
+  }
+
   form > h2 {
     font-size: 1rem;
   }
@@ -227,6 +257,11 @@ input:hover::placeholder {
   body {
     font-size: 0.8rem;
   }
+
+  .images-credit {
+    display: none;
+  }
+
   .form-container {
     grid-template-columns: 1fr;
   }
