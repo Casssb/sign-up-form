@@ -149,12 +149,14 @@ form > h2 {
 
 input {
     border: 0;
+    background-color: antiquewhite;
     cursor: pointer;
 }
 
 input:valid {
-    background-color: rgb(148, 223, 179);
+    border-bottom: 2px solid rgb(9, 161, 72);
 }
+
 
 /* stylings for submit button  */
 
