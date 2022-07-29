@@ -157,6 +157,10 @@ input:valid {
     border-bottom: 2px solid rgb(9, 161, 72);
 }
 
+input:invalid {
+  color: rgb(190, 37, 37);
+}
+
 
 /* stylings for submit button  */
 
