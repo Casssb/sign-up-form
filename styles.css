@@ -11,6 +11,7 @@
     rgba(190, 177, 223, 1) 100%
   );
   --background-color-main: rgba(0, 0, 0, 1);
+  --main-box-shadow: rgba(236, 234, 237, 0.2);
 }
 
 body {
@@ -38,6 +39,8 @@ span:hover {
 em {
   font-style: italic;
 }
+
+/* header stylings start here */
 
 header {
   grid-area: 'header';
@@ -80,6 +83,8 @@ header > img {
   -webkit-text-fill-color: transparent;
 }
 
+/* main section stylings start here */
+
 main {
   grid-area: 'main';
   display: flex;
@@ -95,12 +100,15 @@ main > section > p {
   align-self: center;
 }
 
+/* stylings for form */
+
 form {
   display: flex;
   flex-direction: column;
   background-color: rgba(190, 177, 223, 0.1);
   padding: 1rem;
   border-radius: 5px;
+  box-shadow: 0 4px 8px 0 var(--main-box-shadow);
 }
 
 form > h2 {
@@ -132,12 +140,23 @@ form > h2 {
       border-box;
   border-radius: 10px;
   border: 3px solid transparent;
+  box-shadow: 0 0 10px 3px var(--main-box-shadow);
 }
 
 .form-element > label {
-    padding-left: 0.1rem;
+    padding-left: 0.2rem;
 }
 
+input {
+    border: 0;
+    cursor: pointer;
+}
+
+input:valid {
+    background-color: rgb(148, 223, 179);
+}
+
+/* stylings for submit button  */
 
 button {
   font-family: 'Roboto', sans-serif;
@@ -160,6 +179,7 @@ linear-gradient(
 border-radius: 10px;
 border: 3px solid transparent;
 cursor: pointer;
+box-shadow: 0 0 10px 3px var(--main-box-shadow);
 }
 
 
@@ -174,6 +194,8 @@ button:hover {
 input:hover::placeholder {
   color: transparent;
 }
+
+/* media queries for medium and small devices */
 
 @media only screen and (max-width: 903px) {
   body {
@@ -215,6 +237,8 @@ input:hover::placeholder {
     background-color: black;
   }
 }
+
+/* last media querie fixes the header on very small screens */
 
 @media only screen and (max-width: 380px) {
   body {
