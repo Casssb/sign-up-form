@@ -256,6 +256,7 @@ input:hover::placeholder {
 @media only screen and (max-width: 480px) {
   body {
     font-size: 0.8rem;
+    height: 100%;
   }
 
   .images-credit {
